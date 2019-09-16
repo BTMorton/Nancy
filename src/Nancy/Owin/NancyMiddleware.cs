@@ -214,7 +214,7 @@
             }
 
             // If length cannot be converted to an int, treat it as unknown
-            return int.TryParse(header, NumberStyles.Any, CultureInfo.InvariantCulture, out int contentLength) ? contentLength : (long?)null;
+            return long.TryParse(header, NumberStyles.Any, CultureInfo.InvariantCulture, out long contentLength) ? contentLength : (long?)null;
         }
 
         /// <summary>
